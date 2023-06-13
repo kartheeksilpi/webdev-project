@@ -1,0 +1,145 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="/teachers/dashboard/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-KQ01E5NLNoM8NOYpS0yD5J5OhXDD+i/a5dKjg++96ivbKLql7bxFA+Wm8Lr7jzG6l2er7XunEmW8dOW78Tf/XA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-07UW1Q8CV1/MgKav21b6H9o3qAf8jPcDDZJgDe7C20xWoWbeJ7VrA6M2OW7lh9nlJkZZD4n4e4J2Zd+4tSPw4w==" crossorigin="anonymous"></script>
+</head>
+
+
+<body style="overflow-y: scroll;">
+
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>S</span>TUDENTS</p>
+        <a href="/students/dashboard/sdash.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="/students/dashboard/saca.html" class="icon-a"><i class="fa fa-calendar-check-o icons"></i> &nbsp;&nbsp;Academic Progress</a>
+        <a href="/students/dashboard/sattrep.html" class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Attendance Report</a>
+        <a href="/students/dashboard/mn.html" class="icon-a"><i class="fa fa-graduation-cap icons"></i> &nbsp;&nbsp;Message & Notifications</a>
+        <a href="/students/dashboard/library.html" class="icon-a"><i class="fa fa-file-text-o icons"></i> &nbsp;&nbsp;Library</a>
+        <a href="/students/dashboard/timetable.html" class="icon-a"><i class="fa fa-user icons"></i>  &nbsp;&nbsp;Time Table </a>
+        <a href="/students/dashboard/sprofile.html" class="icon-a"><i class="fas fa-table"></i>&nbsp;&nbsp;Profile</a>
+        <a href="/start.html" class="icon-a"><i class="fa fa-sign-out"></i> &nbsp;&nbsp;Logout</a>
+
+    </div>
+
+
+    <div id="main">
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Student Profile</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Student Profile</span>
+            </div>
+            <br><br><br>
+
+
+            <div class="col-div-8">
+                <div class="box-8">
+                    <div class="content-box">
+                        <center>
+                            <h2 style="color: #f7403b;">Student's Details</h2>
+                        </center>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Address</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><input type="email" name="email"></td>
+                                    <td><input type="tel" name="phone"></td>
+                                    <td><input type="text" name="address"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        </table><br>
+                        <center><button onclick="window.location.href='sprofile.html'" type="button" id="edit-button">Edit</button></center>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script>
+                $(".nav").click(function() {
+                    $("#mySidenav").css('width', '70px');
+                    $("#main").css('margin-left', '70px');
+                    $(".logo").css('visibility', 'hidden');
+                    $(".logo span").css('visibility', 'visible');
+                    $(".logo span").css('margin-left', '-10px');
+                    $(".icon-a").css('visibility', 'hidden');
+                    $(".icons").css('visibility', 'visible');
+                    $(".icons").css('margin-left', '-8px');
+                    $(".nav").css('display', 'none');
+                    $(".nav2").css('display', 'block');
+                });
+
+                $(".nav2").click(function() {
+                    $("#mySidenav").css('width', '300px');
+                    $("#main").css('margin-left', '300px');
+                    $(".logo").css('visibility', 'visible');
+                    $(".icon-a").css('visibility', 'visible');
+                    $(".icons").css('visibility', 'visible');
+                    $(".nav").css('display', 'block');
+                    $(".nav2").css('display', 'none');
+                });
+            </script>
+
+</body>
+
+
+</html>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(".nav").click(function() {
+        $("#mySidenav").css('width', '70px');
+        $("#main").css('margin-left', '70px');
+        $(".logo").css('visibility', 'hidden');
+        $(".logo span").css('visibility', 'visible');
+        $(".logo span").css('margin-left', '-10px');
+        $(".icon-a").css('visibility', 'hidden');
+        $(".icons").css('visibility', 'visible');
+        $(".icons").css('margin-left', '-8px');
+        $(".nav").css('display', 'none');
+        $(".nav2").css('display', 'block');
+    });
+
+    $(".nav2").click(function() {
+        $("#mySidenav").css('width', '300px');
+        $("#main").css('margin-left', '300px');
+        $(".logo").css('visibility', 'visible');
+        $(".icon-a").css('visibility', 'visible');
+        $(".icons").css('visibility', 'visible');
+        $(".nav").css('display', 'block');
+        $(".nav2").css('display', 'none');
+    });
+</script>
+
+</body>
+
+
+</html>

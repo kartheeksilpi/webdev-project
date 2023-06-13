@@ -1,0 +1,191 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title>Attanance Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body style="overflow-y: scroll;">
+
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>T</span>EACHERS</p>
+        <a href="/teachers/dashboard/tdash.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="/teachers/dashboard/attandance.html" class="icon-a"><i class="fa fa-calendar-check-o icons"></i> &nbsp;&nbsp;Attendance</a>
+        <a href="/teachers/dashboard/attrep.html" class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Attendance Report</a>
+        <a href="/teachers/dashboard/mken.html" class="icon-a"><i class="fa fa-graduation-cap icons"></i> &nbsp;&nbsp;Marks Entry</a>
+        <a href="/teachers/dashboard/mkrep.html" class="icon-a"><i class="fa fa-file-text-o icons"></i> &nbsp;&nbsp;Marks Report</a>
+        <a href="/teachers/dashboard/timetable.html" class="icon-a"><i class="fa fa-user icons"></i>  &nbsp;&nbsp;Time Table </a>
+        <a href="/teachers/dashboard/profile.html" class="icon-a"><i class="fas fa-table"></i>&nbsp;&nbsp;Profile</a>
+        <a href="/start.html" class="icon-a"><i class="fa fa-sign-out"></i> &nbsp;&nbsp;Logout</a>
+
+    </div>
+    <div id="main">
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Attandance Report</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Attandance Report</span>
+            </div>
+
+            <body> <br><br><br>
+                <div class="col-div-8">
+                    <div class="box-8">
+                        <div class="content-box">
+                            <div style="float: right;">
+                                <p>Student Attendance Below:</p><br>
+                                <select id="attendanceBelow" name="attendanceBelow">
+  <option value="90">90%</option>
+  <option value="80">80%</option>
+  <option value="70">70%</option>
+  <option value="60">60%</option>
+  <option value="50">50%</option>
+  <option value="40">40%</option>
+  <option value="30">30%</option>
+</select>
+
+                                <table id="attendanceResults">
+                                    <thead>
+                                        <tr>
+                                            <th>Student Name</th>
+                                            <th>Attendance %</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+
+                                <script>
+                                    const attendanceBelowSelect = document.getElementById('attendanceBelow');
+                                    const attendanceTableBody = document.querySelector('#attendanceResults tbody');
+
+                                    // Function to filter the students below the selected attendance percentage
+                                    function filterAttendanceBelow(attendancePercentage) {
+                                        attendanceTableBody.innerHTML = '';
+                                        // Replace the following array with your own list of students and their attendance percentage
+                                        const students = [{
+                                            name: 'Pradeep',
+                                            attendance: 95
+                                        }, {
+                                            name: 'Nitin',
+                                            attendance: 65
+                                        }, {
+                                            name: 'Durga',
+                                            attendance: 55
+                                        }, {
+                                            name: 'Punith',
+                                            attendance: 45
+                                        }, {
+                                            name: 'Lokesh',
+                                            attendance: 25
+                                        }];
+                                        const filteredStudents = students.filter(student => student.attendance < attendancePercentage);
+                                        filteredStudents.forEach(student => {
+                                            const row = document.createElement('tr');
+                                            const nameCell = document.createElement('td');
+                                            nameCell.textContent = student.name;
+                                            const attendanceCell = document.createElement('td');
+                                            attendanceCell.textContent = student.attendance;
+                                            row.appendChild(nameCell);
+                                            row.appendChild(attendanceCell);
+                                            attendanceTableBody.appendChild(row);
+                                        });
+                                    }
+                                    attendanceBelowSelect.addEventListener('change', event => {
+                                        const attendancePercentage = event.target.value;
+                                        filterAttendanceBelow(attendancePercentage);
+                                    });
+                                </script>
+                            </div>
+
+                            <form>
+                                <label for="name" style="color: #ddd;">Name:</label>
+                                <input type="text" id="name" name="name"><br><br>
+                                <label for="regno" style="color: #ddd;">Registration Number:</label>
+                                <input type="text" id="regno" name="regno"><br><br>
+                                <label for="start_date" style="color: #ddd;">Attendance Range:</label>
+                                <input type="date" id="start_date" name="start_date"> <label style="color: #ddd;">to</label>
+                                <input type="date" id="end_date" name="end_date"><br><br>
+                                <input type="submit" value="Generate Report">
+                            </form>
+                            <div>
+                                <h2>Attendance Graph</h2>
+                                <canvas id="attendanceChart"></canvas>
+                                <h2>Attendance Percentage</h2>
+                                <p id="attendancePercentage"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <script>
+                    // Dummy data for attendance graph
+                    // Dummy data for attendance graph
+                    const attendanceData = {
+                        labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4', 'Week 5'],
+                        datasets: [{
+                            label: 'Subject 1',
+                            data: [100, 70, 88, 60, 98],
+                            borderColor: 'blue',
+                            fill: false
+                        }, {
+                            label: 'Subject 2',
+                            data: [59, 80, 50, 56, 70],
+                            borderColor: 'red',
+                            fill: false
+                        }]
+                    };
+
+                    // Create attendance chart
+                    const attendanceCtx = document.getElementById('attendanceChart').getContext('2d');
+                    const attendanceChart = new Chart(attendanceCtx, {
+                        type: 'line',
+                        data: attendanceData
+                    });
+
+                    // Calculate attendance percentage
+                    const attendanceValues = attendanceData.datasets.map(dataset => dataset.data.reduce((a, b) => a + b));
+                    const totalClasses = attendanceData.labels.length;
+                    const totalAttendance = attendanceValues.reduce((a, b) => a + b);
+                    const attendancePercentage = (((totalAttendance / (totalClasses * 100)) * 100) / 2).toFixed(2);
+
+                    // Display attendance percentage
+                    document.getElementById('attendancePercentage').innerText = `Total Attendance Percentage: ${attendancePercentage}%`;
+                </script>
+
+
+
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+                <script>
+                    $(".nav").click(function() {
+                        $("#mySidenav").css('width', '70px');
+                        $("#main").css('margin-left', '70px');
+                        $(".logo").css('visibility', 'hidden');
+                        $(".logo span").css('visibility', 'visible');
+                        $(".logo span").css('margin-left', '-10px');
+                        $(".icon-a").css('visibility', 'hidden');
+                        $(".icons").css('visibility', 'visible');
+                        $(".icons").css('margin-left', '-8px');
+                        $(".nav").css('display', 'none');
+                        $(".nav2").css('display', 'block');
+                    });
+
+                    $(".nav2").click(function() {
+                        $("#mySidenav").css('width', '300px');
+                        $("#main").css('margin-left', '300px');
+                        $(".logo").css('visibility', 'visible');
+                        $(".icon-a").css('visibility', 'visible');
+                        $(".icons").css('visibility', 'visible');
+                        $(".nav").css('display', 'block');
+                        $(".nav2").css('display', 'none');
+                    });
+                </script>
+
+            </body>
+
+
+</html>

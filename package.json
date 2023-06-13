@@ -1,0 +1,17 @@
+{
+    "name": "webdev-project",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "kartheek",
+    "license": "ISC",
+    "dependencies": {
+        "body-parser": "^1.20.2",
+        "express": "^4.18.2",
+        "mysql2": "^3.2.4",
+        "nodemon": "^2.0.22"
+    }
+}

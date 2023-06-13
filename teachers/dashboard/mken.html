@@ -1,0 +1,195 @@
+<!Doctype HTML>
+
+
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-KQ01E5NLNoM8NOYpS0yD5J5OhXDD+i/a5dKjg++96ivbKLql7bxFA+Wm8Lr7jzG6l2er7XunEmW8dOW78Tf/XA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-07UW1Q8CV1/MgKav21b6H9o3qAf8jPcDDZJgDe7C20xWoWbeJ7VrA6M2OW7lh9nlJkZZD4n4e4J2Zd+4tSPw4w==" crossorigin="anonymous"></script>
+</head>
+
+
+<body style="overflow-y: scroll;">
+
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>T</span>EACHERS</p>
+        <a href="/teachers/dashboard/tdash.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="/teachers/dashboard/attandance.html" class="icon-a"><i class="fa fa-calendar-check-o icons"></i> &nbsp;&nbsp;Attendance</a>
+        <a href="/teachers/dashboard/attrep.html" class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Attendance Report</a>
+        <a href="/teachers/dashboard/mken.html" class="icon-a"><i class="fa fa-graduation-cap icons"></i> &nbsp;&nbsp;Marks Entry</a>
+        <a href="/teachers/dashboard/mkrep.html" class="icon-a"><i class="fa fa-file-text-o icons"></i> &nbsp;&nbsp;Marks Report</a>
+        <a href="/teachers/dashboard/timetable.html" class="icon-a"><i class="fa fa-user icons"></i>  &nbsp;&nbsp;Time Table </a>
+        <a href="/teachers/dashboard/profile.html" class="icon-a"><i class="fas fa-table"></i>&nbsp;&nbsp;Profile</a>
+        <a href="/start.html" class="icon-a"><i class="fa fa-sign-out"></i> &nbsp;&nbsp;Logout</a>
+
+    </div>
+    <div id="main">
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Marks Entry</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Marks Entry</span>
+            </div>
+
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <br/>
+
+
+        <div class="col-div-8">
+            <div class="box-8">
+                <div class="content-box">
+                    <h1 style="color: #f7403b;">Marks Entry</h1>
+
+                    <!-- Class selection dropdown -->
+                    <label style="color: aliceblue;" for="classSelect">Select Class:</label>
+                    <select id="classSelect">
+		<option value="class1">K1</option>
+		<option value="class2">K2</option>
+		<option value="class3">L1</option>
+        <option value="class4">L2</option>
+		<option value="class5">O1</option>
+		<option value="class6">O2</option>
+	</select>
+                    <label style="color: aliceblue;" for="subjectSelect">Select Subject:</label>
+                    <select id="subjectSelect">
+		<option value="subject1">DSA</option>
+		<option value="subject2">DAA</option>
+		<option value="subject3">OS</option>
+        <option value="subject4">DBMS</option>
+		<option value="subject5">AI</option>
+		<option value="subject6">FLA</option>
+        <option value="subject7">CD</option>
+		<option value="subject8">SDN</option>
+		<option value="subject9">DCN</option>
+	</select><br><br>
+
+                    <!-- Student list -->
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Roll Number</th>
+                                <th>Name</th>
+                                <th>CT1</th>
+                                <th>CT2</th>
+                                <th>CT3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Hemanth</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Lokesh</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Sandeep</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Pradeep</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Nithin</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Bhargav</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Saketh</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Durga</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Jyothi</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Rohini</td>
+                                <td><input type="number" name="assessment1" min="0" max="100"></td>
+                                <td><input type="number" name="assessment2" min="0" max="100"></td>
+                                <td><input type="number" name="exam1" min="0" max="100"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Save and submit button -->
+                    <button class="b1" type="submit">Save and Submit</button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(".nav").click(function() {
+                $("#mySidenav").css('width', '70px');
+                $("#main").css('margin-left', '70px');
+                $(".logo").css('visibility', 'hidden');
+                $(".logo span").css('visibility', 'visible');
+                $(".logo span").css('margin-left', '-10px');
+                $(".icon-a").css('visibility', 'hidden');
+                $(".icons").css('visibility', 'visible');
+                $(".icons").css('margin-left', '-8px');
+                $(".nav").css('display', 'none');
+                $(".nav2").css('display', 'block');
+            });
+
+            $(".nav2").click(function() {
+                $("#mySidenav").css('width', '300px');
+                $("#main").css('margin-left', '300px');
+                $(".logo").css('visibility', 'visible');
+                $(".icon-a").css('visibility', 'visible');
+                $(".icons").css('visibility', 'visible');
+                $(".nav").css('display', 'block');
+                $(".nav2").css('display', 'none');
+            });
+        </script>
+
+</body>
+
+
+</html>

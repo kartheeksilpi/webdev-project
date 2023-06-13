@@ -1,0 +1,158 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-KQ01E5NLNoM8NOYpS0yD5J5OhXDD+i/a5dKjg++96ivbKLql7bxFA+Wm8Lr7jzG6l2er7XunEmW8dOW78Tf/XA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js" integrity="sha512-07UW1Q8CV1/MgKav21b6H9o3qAf8jPcDDZJgDe7C20xWoWbeJ7VrA6M2OW7lh9nlJkZZD4n4e4J2Zd+4tSPw4w==" crossorigin="anonymous"></script>
+</head>
+
+
+<body style="overflow-y: scroll;">
+
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>T</span>EACHERS</p>
+        <a href="/teachers/dashboard/tdash.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="/teachers/dashboard/attandance.html" class="icon-a"><i class="fa fa-calendar-check-o icons"></i> &nbsp;&nbsp;Academic Progress</a>
+        <a href="/teachers/dashboard/attrep.html" class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Attendance Report</a>
+        <a href="/teachers/dashboard/mken.html" class="icon-a"><i class="fa fa-graduation-cap icons"></i> &nbsp;&nbsp;Marks Entry</a>
+        <a href="/teachers/dashboard/mkrep.html" class="icon-a"><i class="fa fa-file-text-o icons"></i> &nbsp;&nbsp;Marks Report</a>
+        <a href="/teachers/dashboard/timetable.html" class="icon-a"><i class="fa fa-user icons"></i>  &nbsp;&nbsp;Time Table </a>
+        <a href="/teachers/dashboard/profile.html" class="icon-a"><i class="fas fa-table"></i>&nbsp;&nbsp;Profile</a>
+        <a href="/start.html" class="icon-a"><i class="fa fa-sign-out"></i> &nbsp;&nbsp;Logout</a>
+
+    </div>
+    <div id="main">
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Dashboard</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Dashboard</span>
+            </div>
+
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <br/>
+
+        <div class="col-div-3">
+            <div class="box">
+                <p><span>Academic Progress</span></p>
+                <i class="fa fa-users box-icon"></i>
+            </div>
+        </div>
+        <div class="col-div-3">
+            <div class="box">
+                <p><span>Attendance Report</span></p>
+                <i class="fa fa-list box-icon"></i>
+            </div>
+        </div>
+        <div class="col-div-3">
+            <div class="box">
+                <p><span>Marks Entry</span></p>
+                <i class="fa fa-shopping-bag box-icon"></i>
+            </div>
+        </div>
+        <div class="col-div-3">
+            <div class="box">
+                <p><span>Profile</span></p>
+                <i class="fa fa-tasks box-icon"></i>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <br/><br/>
+        <div class="col-div-8">
+            <div class="clearfix"></div>
+        </div>
+        <p id="par">Welcome to your dashboard. Here you can manage your teaching responsibilities. </p>
+        <div class="col-div-8">
+            <div class="box-8">
+                <div class="content-box">
+                    <center style="color: antiquewhite;">
+                        <h1>Announcements and Notifications</h1>
+                    </center>
+
+                    <h2 style="color: #ddd;">Latest Announcements</h2>
+                    <ul style="color: blanchedalmond;">
+                        <li>Spring Break: The university will be closed from April 30th to May 7th for spring break.</li>
+                        <li>New Course Offering: A new course on "Artificial Intelligence and Machine Learning" will be offered in the fall semester.</li>
+                        <li>Graduation Ceremony: The graduation ceremony for the class of 2023 will be held on May 15th at 10:00am in the campus stadium.</li>
+                    </ul>
+
+                    <h2 style="color: #ddd;">Latest Notifications</h2>
+                    <ul style="color: blanchedalmond;">
+                        <li>Power Outage: There will be a scheduled power outage on May 1st from 8:00am to 12:00pm. Please plan accordingly.</li>
+                        <li>Campus Construction: Due to construction, the north entrance to the library will be closed from May 3rd to May 10th. Please use the west entrance during this time.</li>
+                        <li>Library Hours: Starting May 1st, the library will be open from 9:00am to 5:00pm on weekends. Weekday hours remain the same.</li>
+                    </ul>
+                    <div id='calendar'></div>
+                    <br><br>
+
+                    <p>Announcements</p>
+                    <h1></h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Message</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="date">April 23, 2023</td>
+                                <td>Important Announcement</td>
+                                <td> Spring Break: The university will be closed from April 30th to May 7th for spring break.</td>
+                            </tr>
+                            <tr>
+                                <td class="date">April 22, 2023</td>
+                                <td>Upcoming Event</td>
+                                <td>Graduation Ceremony: The graduation ceremony for the class of 2023 will be held on May 15th at 10:00am in the campus stadium.</td>
+                            </tr>
+                            <tr>
+                                <td class="date">April 20, 2023</td>
+                                <td>Reminder: Assignment Due</td>
+                                <td>Library Hours: Starting May 1st, the library will be open from 9:00am to 5:00pm on weekends. Weekday hours remain the same.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(".nav").click(function() {
+                $("#mySidenav").css('width', '70px');
+                $("#main").css('margin-left', '70px');
+                $(".logo").css('visibility', 'hidden');
+                $(".logo span").css('visibility', 'visible');
+                $(".logo span").css('margin-left', '-10px');
+                $(".icon-a").css('visibility', 'hidden');
+                $(".icons").css('visibility', 'visible');
+                $(".icons").css('margin-left', '-8px');
+                $(".nav").css('display', 'none');
+                $(".nav2").css('display', 'block');
+            });
+
+            $(".nav2").click(function() {
+                $("#mySidenav").css('width', '300px');
+                $("#main").css('margin-left', '300px');
+                $(".logo").css('visibility', 'visible');
+                $(".icon-a").css('visibility', 'visible');
+                $(".icons").css('visibility', 'visible');
+                $(".nav").css('display', 'block');
+                $(".nav2").css('display', 'none');
+            });
+        </script>
+
+</body>
+
+
+</html>

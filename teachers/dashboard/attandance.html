@@ -1,0 +1,228 @@
+<!Doctype HTML>
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <p class="logo"><span>T</span>EACHERS</p>
+        <a href="/teachers/dashboard/tdash.html" class="icon-a"><i class="fa fa-dashboard icons"></i> &nbsp;&nbsp;Dashboard</a>
+        <a href="/teachers/dashboard/attandance.html" class="icon-a"><i class="fa fa-calendar-check-o icons"></i> &nbsp;&nbsp;Attendance</a>
+        <a href="/teachers/dashboard/attrep.html" class="icon-a"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Attendance Report</a>
+        <a href="/teachers/dashboard/mken.html" class="icon-a"><i class="fa fa-graduation-cap icons"></i> &nbsp;&nbsp;Marks Entry</a>
+        <a href="/teachers/dashboard/mkrep.html" class="icon-a"><i class="fa fa-file-text-o icons"></i> &nbsp;&nbsp;Marks Report</a>
+        <a href="/teachers/dashboard/timetable.html" class="icon-a"><i class="fa fa-user icons"></i>  &nbsp;&nbsp;Time Table </a>
+        <a href="/teachers/dashboard/profile.html" class="icon-a"><i class="fas fa-table"></i>&nbsp;&nbsp;Profile</a>
+        <a href="/start.html" class="icon-a"><i class="fa fa-sign-out"></i> &nbsp;&nbsp;Logout</a>
+
+    </div>
+    <div id="main">
+
+        <div class="head">
+            <div class="col-div-6">
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav">&#9776; Attendance Management</span>
+                <span style="font-size:30px;cursor:pointer; color: white;" class="nav2">&#9776; Attendance Management</span>
+            </div>
+
+
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="clearfix"></div>
+        <br/>
+        <!DOCTYPE html>
+        <html>
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Attendance Management</title>
+
+            <link rel="stylesheet" href="styles.css">
+        </head>
+
+        <br>
+
+        <body style="overflow-y: scroll;">
+            <div class="col-div-8">
+                <div class="box-8">
+                    <div class="content-box">
+                        <p>Attendance <span><label class="d">Select Subject:</label>
+                            <select id="subject" name="subject">
+                              <option value="DSA">DSA</option>
+                              <option value="WEBDEV">WEBDEV</option>
+                              <option value="OODP">OODP</option>
+                              <option value="AI">AI</option>
+                              <option value="CD">CD</option>
+                              <option value="FLA">FLA</option>
+                              <option value="DAA">DAA</option>
+                              <option value="PPS">PPS</option>
+                              <option value="OS">OS</option>
+                              <option value="DBMS">DBMS</option>                              
+                            </select> Date : <input type="date" id="attendance_date" name="attendance_date"></span></p>
+                        <br/>
+
+                        <form>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Reg No.</th>
+                                        <th>Student Name</th>
+                                        <th>Attendance Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>101</td>
+                                        <td>Hemanth</td>
+                                        <td>
+                                            <input type="radio" name="attendance_1" value="present" id="attendance_1_present">
+                                            <label for="attendance_1_present">Present</label>
+                                            <input type="radio" name="attendance_1" value="absent" id="attendance_1_absent">
+                                            <label for="attendance_1_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>Lokesh</td>
+                                        <td>
+                                            <input type="radio" name="attendance_2" value="present" id="attendance_2_present">
+                                            <label for="attendance_2_present">Present</label>
+                                            <input type="radio" name="attendance_2" value="absent" id="attendance_2_absent">
+                                            <label for="attendance_2_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>103</td>
+                                        <td>Sandeep</td>
+                                        <td>
+                                            <input type="radio" name="attendance_3" value="present" id="attendance_3_present">
+                                            <label for="attendance_3_present">Present</label>
+                                            <input type="radio" name="attendance_3" value="absent" id="attendance_3_absent">
+                                            <label for="attendance_3_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>104</td>
+                                        <td>Pradeep</td>
+                                        <td>
+                                            <input type="radio" name="attendance_4" value="present" id="attendance_4_present">
+                                            <label for="attendance_4_present">Present</label>
+                                            <input type="radio" name="attendance_4" value="absent" id="attendance_4_absent">
+                                            <label for="attendance_4_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>105</td>
+                                        <td>Nithin</td>
+                                        <td>
+                                            <input type="radio" name="attendance_5" value="present" id="attendance_5_present">
+                                            <label for="attendance_5_present">Present</label>
+                                            <input type="radio" name="attendance_5" value="absent" id="attendance_5_absent">
+                                            <label for="attendance_5_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>106</td>
+                                        <td>Bhargav</td>
+                                        <td>
+                                            <input type="radio" name="attendance_6" value="present" id="attendance_6_present">
+                                            <label for="attendance_6_present">Present</label>
+                                            <input type="radio" name="attendance_6" value="absent" id="attendance_6_absent">
+                                            <label for="attendance_6_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>107</td>
+                                        <td>Saketh</td>
+                                        <td>
+                                            <input type="radio" name="attendance_6" value="present" id="attendance_6_present">
+                                            <label for="attendance_6_present">Present</label>
+                                            <input type="radio" name="attendance_6" value="absent" id="attendance_6_absent">
+                                            <label for="attendance_6_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>108</td>
+                                        <td>Durga</td>
+                                        <td>
+                                            <input type="radio" name="attendance_6" value="present" id="attendance_6_present">
+                                            <label for="attendance_6_present">Present</label>
+                                            <input type="radio" name="attendance_6" value="absent" id="attendance_6_absent">
+                                            <label for="attendance_6_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>109</td>
+                                        <td>Jyothi</td>
+                                        <td>
+                                            <input type="radio" name="attendance_6" value="present" id="attendance_6_present">
+                                            <label for="attendance_6_present">Present</label>
+                                            <input type="radio" name="attendance_6" value="absent" id="attendance_6_absent">
+                                            <label for="attendance_6_absent">Absent</label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>110</td>
+                                        <td>Roshini</td>
+                                        <td>
+                                            <input type="radio" name="attendance_6" value="present" id="attendance_6_present">
+                                            <label for="attendance_6_present">Present</label>
+                                            <input type="radio" name="attendance_6" value="absent" id="attendance_6_absent">
+                                            <label for="attendance_6_absent">Absent</label>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <br>
+                            <input type="submit" value="Submit Attendance">
+                            <button type="button" id="add-student-btn">Add Student</button>
+                            <br>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </body>
+
+        </html>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+        <script>
+            $(".nav ").click(function() {
+                $("#mySidenav ").css('width', '70px');
+                $("#main ").css('margin-left', '70px');
+                $(".logo ").css('visibility', 'hidden');
+                $(".logo span ").css('visibility', 'visible');
+                $(".logo span ").css('margin-left', '-10px');
+                $(".icon-a ").css('visibility', 'hidden');
+                $(".icons ").css('visibility', 'visible');
+                $(".icons ").css('margin-left', '-8px');
+                $(".nav ").css('display', 'none');
+                $(".nav2 ").css('display', 'block');
+            });
+
+            $(".nav2 ").click(function() {
+                $("#mySidenav ").css('width', '300px');
+                $("#main ").css('margin-left', '300px');
+                $(".logo ").css('visibility', 'visible');
+                $(".icon-a ").css('visibility', 'visible');
+                $(".icons ").css('visibility', 'visible');
+                $(".nav ").css('display', 'block');
+                $(".nav2 ").css('display', 'none');
+            });
+        </script>
+
+</body>
+
+
+</html>
